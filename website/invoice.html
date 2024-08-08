@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Jason's Vinyl</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produk.html">Produk dan Transaksi</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="left">
+            <h2>Promo Sorotan</h2>
+            <img src="https://media.istockphoto.com/id/1387606895/vector/hot-deal-banner-special-and-limited-offer-sale-countdown-badge-promo-sticker-with-stopwatch.jpg?s=612x612&w=0&k=20&c=MpGFvD0N4cGiBXijEP76ZbwWKMY-WwrW4cNiyZLF3h8=" alt="Promo Image" style="width: 100%;">
+            <p>Promo musik terpanas di Asia! Hot Deals menghadirkan penawaran terbaik untuk Anda.</p>
+        </aside>
+        <main class="content">
+            <h2>Invoice</h2>
+            <div class="invoice-details">
+                <p><strong>Produk:</strong> <span id="product"></span></p>
+                <p><strong>Harga:</strong> <span id="price">$50.00</span></p> 
+                <p><strong>Jumlah:</strong> <span id="quantity"></span></p>
+                <p><strong>Total:</strong> <span id="total"></span></p>
+                <p><strong>Nama Pembeli:</strong> <span id="buyerName"></span></p>
+                <p><strong>Alamat:</strong> <span id="address"></span></p>
+            </div>
+            <p>Terimakasih telah berbelanja di Jason's Vinyl.</p>
+        </main>
+        <aside class="right">
+            <h2>Rumah Musik & Ekspresi</h2>
+            <img src="https://t3.ftcdn.net/jpg/00/12/88/96/360_F_12889627_QZnx93sIIozLF0SO3Xl657ThnjDE7lEO.jpg" alt="Advertisement Image" style="width: 100%;">
+            <p> Jelajahi 10.000+ item pilihan dari merek ternama. Bergabunglah dengan 150.000+ music lovers di komunitas tepercaya kami sejak 2013.</p>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2024 Website Jualan. All rights reserved.</p>
+        <p>Contact us: email@example.com</p>
+    </footer>
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const product = params.get('productName');
+            const quantity = params.get('quantity');
+            const buyerName = params.get('buyerName');
+            const address = params.get('address');
+            const price = 10.00; 
+            const total = price * quantity;
+
+            if (product) document.getElementById('product').innerText = product;
+            if (quantity) document.getElementById('quantity').innerText = quantity;
+            if (buyerName) document.getElementById('buyerName').innerText = buyerName;
+            if (address) document.getElementById('address').innerText = address;
+            if (total) document.getElementById('total').innerText = '$' + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
