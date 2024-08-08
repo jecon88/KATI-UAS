@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Jason's Vinyl</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produk.html">Produk dan Transaksi</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="left">
+            <h2>Promo Sorotan</h2>
+            <img src="https://media.istockphoto.com/id/1387606895/vector/hot-deal-banner-special-and-limited-offer-sale-countdown-badge-promo-sticker-with-stopwatch.jpg?s=612x612&w=0&k=20&c=MpGFvD0N4cGiBXijEP76ZbwWKMY-WwrW4cNiyZLF3h8=" alt="Promo Image" style="width: 100%;">
+            <p>Promo musik terpanas di Asia! Hot Deals menghadirkan penawaran terbaik untuk Anda.</p>
+        </aside>
+        <main class="content">
+            <h2>Produk</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <h3>Pink Floyd,Wish You Were Here</h3>
+                    <img src="https://hifi-project.com/wp-content/uploads/2020/11/pink-floyd-wish-you-were-here.jpg" alt="Pink Floyd" style="width: 40%;">
+                    <p>SKU    : 5099902988016</p>
+                    <p>Format : Vinyl</p>
+                    <p>Genre  : Rock</p>
+                    <button onclick="inputTransaction('Pink Floyd,Wish You Were Here')">Beli</button>
+                </div>
+                <div class="product-item">
+                    <h3>MF DOOM,Born Like This</h3>
+                    <img src="https://flyingout.co.nz/cdn/shop/files/Doom_-_Born_Like_This_-_2LP_Black_Vinyl_-_2023_Repress_460x@2x.webp?v=1690083422" alt="MF DOOM" style="width: 40%;">
+                    <p>SKU    : 600202988016</p>
+                    <p>Format : Vinyl</p>
+                    <p>Genre  : Hip Hop</p>
+                    <button onclick="inputTransaction('MF DOOM,Born Like This')">Beli</button>
+                </div>
+                <div class="product-item">
+                    <h3>The Adams,V2.05</h3>
+                    <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/8/7/2cb5ec3b-1f27-438f-be1e-5f316cf5d7f4.jpg" alt="The Adams" style="width: 40%;">
+                    <p>SKU    : 800202988016</p>
+                    <p>Format : Vinyl</p>
+                    <p>Genre  : Indie Rock</p>
+                    <button onclick="inputTransaction('The Adams,V2.05')">Beli</button>
+                </div>
+            </div>
+        </main>
+        <aside class="right">
+            <h2>Rumah Musik & Ekspresi</h2>
+            <img src="https://t3.ftcdn.net/jpg/00/12/88/96/360_F_12889627_QZnx93sIIozLF0SO3Xl657ThnjDE7lEO.jpg" alt="Advertisement Image" style="width: 100%;">
+            <p> Jelajahi 10.000+ item pilihan dari merek ternama. Bergabunglah dengan 150.000+ music lovers di komunitas tepercaya kami sejak 2013.</p>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2023 Jason Vinyl. All rights reserved.</p>
+        <p>Kontak Kami: jasonvinyl@gmail.com </p>
+    </footer>
+    <script>
+        function inputTransaction(product) {
+            alert(product + ' selected for transaction.');
+            window.location.href = 'transaksi.html?product=' + encodeURIComponent(product);
+        }
+    </script>
+</body>
+</html>
+

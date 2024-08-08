@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Jason's Vinyl</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produk.html">Produk dan Transaksi</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside class="left">
+            <h2>Promo Sorotan</h2>
+            <img src="https://media.istockphoto.com/id/1387606895/vector/hot-deal-banner-special-and-limited-offer-sale-countdown-badge-promo-sticker-with-stopwatch.jpg?s=612x612&w=0&k=20&c=MpGFvD0N4cGiBXijEP76ZbwWKMY-WwrW4cNiyZLF3h8=" alt="Promo Image" style="width: 100%;">
+            <p>Promo musik terpanas di Asia! Hot Deals menghadirkan penawaran terbaik untuk Anda.</p>
+        </aside>
+        <main class="content">
+            <h2>Input Transaksi</h2>
+            <form id="transactionForm" method="GET" action="invoice.html">
+                <div>
+                    <label for="productName">Nama Produk:</label>
+                    <input type="text" id="productName" name="productName" readonly>
+                </div>
+                <div>
+                    <label for="quantity">Jumlah:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>
+                <div>
+                    <label for="buyerName">Nama Pemesan:</label>
+                    <input type="text" id="buyerName" name="buyerName" required>
+                </div>
+                <div>
+                    <label for="address">Alamat:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <button type="submit">Checkout</button>
+            </form>
+        </main>
+        <aside class="right">
+            <h2>Rumah Musik & Ekspresi</h2>
+            <img src="https://t3.ftcdn.net/jpg/00/12/88/96/360_F_12889627_QZnx93sIIozLF0SO3Xl657ThnjDE7lEO.jpg" alt="Advertisement Image" style="width: 100%;">
+            <p> Jelajahi 10.000+ item pilihan dari merek ternama. Bergabunglah dengan 150.000+ music lovers di komunitas tepercaya kami sejak 2013.</p>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2023 Jason Vinyl. All rights reserved.</p>
+        <p>Kontak Kami: jasonvinyl@gmail.com </p>
+    </footer>
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const product = params.get('product');
+            if (product) {
+                document.getElementById('productName').value = product;
+            }
+        }
+    </script>
+</body>
+</html>
